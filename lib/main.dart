@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
       home: CategoriesScreen(),
       routes: {
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        // MealDetailScreen.routeName: (ctx) => MealDetailScreen()
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen()
       },
+      // ignore: missing_return
       onGenerateRoute: (settings) {
         print(settings.arguments);
         // if (settings.name == '/meal-detail') {
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // return MaterialPageRoute(builder: (ctx) => CategoriesScreen())
       },
       onUnknownRoute: (settings) {
-        return MaterialPageRoute(builder: (ctx) => CategoriesScreen())
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
